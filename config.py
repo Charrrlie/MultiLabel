@@ -2,28 +2,27 @@ import warnings
 
 
 class DefaultConfig(object):
-    def __init__(self):
-        # data parameters
-        data_path = './data/FLICKR-25K.mat'
+    # data parameters
+    data_path = './data/FLICKR-25K.mat'
 
-        training_size = 10000
-        query_size = 2000
-        database_size = 18015
+    training_size = 10000
+    query_size = 2000
+    database_size = 18015
 
-        load_img_path = './checkpoints/image_model.pth'  
-        load_txt_path = './checkpoints/text_model.pth'
-        load_cls_path = './checkpoints/cls_model.pth'
+    load_img_path = './checkpoints/image_model.pth'  
+    load_txt_path = './checkpoints/text_model.pth'
+    load_cls_path = './checkpoints/cls_model.pth'
 
-        log = False # log tensorboard
-
-        pretrain_model_path = './data/imagenet-vgg-f.mat'
+    pretrain_model_path = './data/imagenet-vgg-f.mat'
     
     num_class = 24 # label size
 
     # hyper-parameters
     max_epoch = 500
     batch_size = 128
+    
     lr = 1e-4
+    
     bit = 16  
     use_gpu = True
     valid = True
